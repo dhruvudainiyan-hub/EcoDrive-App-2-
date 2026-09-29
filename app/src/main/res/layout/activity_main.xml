@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="12dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnConnect" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:text="Connect HC-05" />
+        <TextView android:id="@+id/tvStatus" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:gravity="center" android:text="Disconnected" />
+    </LinearLayout>
+
+    <ScrollView android:id="@+id/scroll" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp"
+        android:background="#111111">
+        <TextView android:id="@+id/tvLog" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="8dp"
+            android:textColor="#00FF66" android:typeface="monospace" />
+    </ScrollView>
+
+    <TextView android:id="@+id/tvHeard" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="6dp" android:text="Heard: -" />
+
+    <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:columnCount="3" android:layout_marginTop="6dp">
+        <Button android:id="@+id/bLeft" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="Left 90" />
+        <Button android:id="@+id/bFwd" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="Fwd 1s" />
+        <Button android:id="@+id/bRight" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="Right 90" />
+        <Button android:id="@+id/bStop" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="STOP" />
+        <Button android:id="@+id/bBack" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="Back 1s" />
+        <Button android:id="@+id/bRead" android:layout_width="0dp" android:layout_columnWeight="1" android:layout_height="wrap_content" android:text="Readings" />
+    </GridLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="6dp">
+        <EditText android:id="@+id/etCmd" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:hint="Type a command"
+            android:inputType="text" android:imeOptions="actionSend" />
+        <Button android:id="@+id/btnSend" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Send" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btnMic" android:layout_width="match_parent"
+        android:layout_height="72dp" android:text="🎤  Tap &amp; Speak" android:textSize="20sp" />
+</LinearLayout>
